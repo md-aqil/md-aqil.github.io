@@ -88,7 +88,7 @@ const CaseStudiesSection = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-24 px-4 relative">
+    <section id="work" ref={sectionRef} className="py-24 px-4 relative">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-20">
           <h2 className="text-4xl md:text-6xl font-bold mb-6 font-satoshi">

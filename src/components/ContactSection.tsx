@@ -39,7 +39,7 @@ const ContactSection = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-24 px-4 relative overflow-hidden">
+    <section id="contact" ref={sectionRef} className="py-24 px-4 relative overflow-hidden">
       {/* Background effects */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent" />
       <div className="absolute top-20 right-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl" />

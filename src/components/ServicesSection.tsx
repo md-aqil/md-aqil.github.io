@@ -112,7 +112,7 @@ const ServicesSection = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-24 px-4 relative">
+    <section id="services" ref={sectionRef} className="py-24 px-4 relative">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0 bg-gradient-to-r from-primary via-accent to-primary opacity-10" 
