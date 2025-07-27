@@ -7,13 +7,8 @@ import ServicesSection from '@/components/ServicesSection';
 import ContactSection from '@/components/ContactSection';
 
 const Index = () => {
-  useEffect(() => {
-    // Set dark mode by default
-    document.documentElement.classList.add('dark');
-  }, []);
-
   return (
-    <div className="min-h-screen bg-background dark">
+    <div className="min-h-screen bg-background">
       <Navigation />
       <HeroSection />
       <AboutSection />

@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
+import { ThemeToggle } from '@/components/ThemeToggle';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -59,14 +60,17 @@ const Navigation = () => {
             </button>
           </div>
 
-          {/* CTA Button */}
-          <Button 
-            variant="glass" 
-            size="sm"
-            onClick={() => scrollToSection('contact')}
-          >
-            Let's Talk
-          </Button>
+          {/* Theme Toggle & CTA */}
+          <div className="flex items-center gap-3">
+            <ThemeToggle />
+            <Button 
+              variant="glass" 
+              size="sm"
+              onClick={() => scrollToSection('contact')}
+            >
+              Let's Talk
+            </Button>
+          </div>
         </div>
       </div>
     </nav>
