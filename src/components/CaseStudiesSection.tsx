@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { ExternalLink, ArrowRight, TrendingUp, Users, Zap } from 'lucide-react';
 import { Button } from './ui/button';
+import { useNavigate } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -8,6 +9,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const caseStudies = [
   {
+    id: 'saas-dashboard',
     title: "SaaS Dashboard Redesign",
     client: "TechFlow Analytics",
     challenge: "Users were abandoning the complex analytics dashboard, leading to poor retention rates.",
@@ -22,6 +24,7 @@ const caseStudies = [
     tags: ["UX Research", "Dashboard Design", "B2B SaaS"]
   },
   {
+    id: 'ecommerce-app',
     title: "E-commerce Mobile App",
     client: "StyleHub Fashion",
     challenge: "Low conversion rates on mobile checkout flow, with 68% cart abandonment.",
@@ -36,6 +39,7 @@ const caseStudies = [
     tags: ["Mobile Design", "E-commerce", "Conversion Optimization"]
   },
   {
+    id: 'fintech-landing',
     title: "FinTech Landing Page",
     client: "CryptoVault",
     challenge: "Complex financial product needed clear communication to build trust with new users.",
@@ -53,6 +57,7 @@ const caseStudies = [
 
 const CaseStudiesSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (!sectionRef.current) return;
@@ -188,7 +193,11 @@ const CaseStudiesSection = () => {
                   </div>
                 </div>
 
-                <Button variant="ghost" className="group">
+                <Button 
+                  variant="ghost" 
+                  className="group"
+                  onClick={() => navigate(`/case-study/${study.id}`)}
+                >
                   View Full Case Study
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Button>
