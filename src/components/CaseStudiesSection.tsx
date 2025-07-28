@@ -211,7 +211,13 @@ const CaseStudiesSection = () => {
                 <Button 
                   variant="ghost" 
                   className="group"
-                  onClick={() => navigate(`/case-study/${study.id}`)}
+                  onClick={() => {
+                    if (study.id === 'deerika-grocery') {
+                      navigate('/deerika-case-study');
+                    } else {
+                      navigate(`/case-study/${study.id}`);
+                    }
+                  }}
                 >
                   View Full Case Study
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
