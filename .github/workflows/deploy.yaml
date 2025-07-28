@@ -2,9 +2,9 @@ name: Deploy to GitHub Pages
 
 on:
   workflow_run:
-  # push:
-  #   branches:
-  #     - main
+  push:
+    branches:
+      - main
 
 permissions:
   contents: write
@@ -29,6 +29,8 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Deploy to gh-pages
-        run: |
-          npx gh-pages -d dist
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
