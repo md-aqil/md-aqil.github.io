@@ -81,7 +81,7 @@ const HeroSection = () => {
       <div className="relative z-10 text-center max-w-6xl mx-auto px-4">
         <h1 
           ref={titleRef}
-          className="text-hero mb-8"
+          className="text-hero mb-6 leading-tight"
         >
           Designs That Think.
           <br />
@@ -137,17 +137,6 @@ const HeroSection = () => {
           </div>
         </div>
 
-        {/* Featured Project */}
-        <div className="mt-20 glass rounded-2xl p-6 max-w-md mx-auto">
-          <div className="text-sm text-muted-foreground mb-2">Featured Project</div>
-          <h3 className="text-xl font-semibold mb-2">Deerika Grocery App</h3>
-          <p className="text-sm text-muted-foreground mb-4">
-            Transformed grocery shopping experience with 284% increase in orders
-          </p>
-          <Button variant="ghost" size="sm" className="text-primary">
-            View Case Study <ArrowRight className="w-4 h-4 ml-1" />
-          </Button>
-        </div>
       </div>
 
       {/* Scroll indicator */}
