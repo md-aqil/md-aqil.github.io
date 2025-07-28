@@ -9,6 +9,21 @@ gsap.registerPlugin(ScrollTrigger);
 
 const caseStudies = [
   {
+    id: 'deerika-grocery',
+    title: "Deerika Grocery App",
+    client: "Deerika.in",
+    challenge: "Traditional grocery shopping was time-consuming with limited delivery options and poor user experience leading to low customer retention.",
+    process: "Redesigned the entire user journey from product discovery to checkout, implemented flexible delivery slots, and created a membership program with instant cashback rewards.",
+    psychology: "Applied convenience psychology and instant gratification through same-day delivery and immediate cashback rewards",
+    results: {
+      orders: "+284%",
+      retention: "+167%",
+      satisfaction: "+92%"
+    },
+    image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&h=600&fit=crop",
+    tags: ["E-commerce", "Mobile App", "Grocery Delivery"]
+  },
+  {
     id: 'saas-dashboard',
     title: "SaaS Dashboard Redesign",
     client: "TechFlow Analytics",
@@ -93,7 +108,7 @@ const CaseStudiesSection = () => {
   }, []);
 
   return (
-    <section id="work" ref={sectionRef} className="py-24 px-4 relative">
+    <section id="work" ref={sectionRef} className="py-16 px-4 relative">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-20">
           <h2 className="text-4xl md:text-6xl font-bold mb-6 font-satoshi">
@@ -196,7 +211,13 @@ const CaseStudiesSection = () => {
                 <Button 
                   variant="ghost" 
                   className="group"
-                  onClick={() => navigate(`/case-study/${study.id}`)}
+                  onClick={() => {
+                    if (study.id === 'deerika-grocery') {
+                      navigate('/deerika-case-study');
+                    } else {
+                      navigate(`/case-study/${study.id}`);
+                    }
+                  }}
                 >
                   View Full Case Study
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
