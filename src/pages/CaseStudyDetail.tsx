@@ -139,6 +139,56 @@ const caseStudyData: Record<string, any> = {
     ],
     implementation: "The landing page was built with performance in mind, featuring fast load times, mobile optimization, and conversion tracking integration.",
     impact: "The redesigned landing page achieved a 203% increase in signups, 78% improvement in engagement metrics, and 167% boost in trust indicators measured through user surveys."
+  },
+  'vaclav-fashion': {
+    title: 'Vaclav Fashion',
+    client: 'Vaclav',
+    duration: '10 weeks',
+    team: 'Solo Designer',
+    challenge:
+      'The fashion market often separates sustainability and luxury, with minimal focus on inclusive sizing and timeless styles. Vaclav needed to blend responsible production with elegant, versatile design.',
+    process:
+      'Defined a luxury, mobile-first e-commerce experience with high-impact lifestyle imagery, storytelling pages, detailed size guides, and community-driven social integrations (e.g., #VaclavStyle).',
+    psychology:
+      'Built desire and trust using storytelling, social proof, and authority signals; emphasized sustainability transparency to reduce purchase anxiety.',
+    results: {
+      recognition: 'Recognized luxury womenswear label',
+      community: '19K Instagram followers',
+      satisfaction: 'Consistently positive reviews'
+    },
+    heroImage: 'https://images.unsplash.com/photo-1520975916090-3105956dac38?w=1200&h=600&fit=crop',
+    beforeImage: 'https://images.unsplash.com/photo-1509631179647-0177331693ae?w=800&h=500&fit=crop',
+    afterImage: 'https://images.unsplash.com/photo-1520975916090-3105956dac38?w=800&h=500&fit=crop',
+    tags: ['Fashion', 'E-commerce', 'Sustainability'],
+    overview:
+      "A London-based luxury womenswear brand blending minimalist sophistication, sustainability, and modern craftsmanship to empower contemporary women.",
+    researchFindings: [
+      'Customers value both sustainable practices and luxury finish',
+      'Inclusive sizing and clear fit guidance are essential for confidence',
+      'Emotional storytelling and founder-led vision increase brand affinity',
+      'High-quality lifestyle imagery drives engagement and conversions'
+    ],
+    designPrinciples: [
+      {
+        icon: Brain,
+        title: 'Story-Driven UX',
+        description: 'Elevated brand narrative with editorial layouts, founder story, and materials transparency.'
+      },
+      {
+        icon: Users,
+        title: 'Social Proof',
+        description: 'Community features and reviews build credibility and reduce purchase hesitation.'
+      },
+      {
+        icon: Lightbulb,
+        title: 'Clarity & Minimalism',
+        description: 'Clean typography, ample whitespace, and focused interactions create a luxury feel.'
+      }
+    ],
+    implementation:
+      'Implemented smooth scroll reveals, zoomable product visuals, and a detailed sizing guide. Content strategy highlights fabric quality, artisan production, and sustainability credentials.',
+    impact:
+      'Established as a recognized luxury label within five years. Strong engagement on social, with positive feedback on quality, fit, and emotional brand connection.'
   }
 };
 

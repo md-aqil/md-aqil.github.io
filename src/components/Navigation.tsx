@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { ThemeToggle } from '@/components/ThemeToggle';
+import { Link } from 'react-router-dom';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -40,12 +41,12 @@ const Navigation = () => {
             >
               About
             </button>
-            <button 
-              onClick={() => scrollToSection('work')}
+            <Link 
+              to="/work"
               className="text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
               Work
-            </button>
+            </Link>
             <button 
               onClick={() => scrollToSection('services')}
               className="text-sm text-muted-foreground hover:text-foreground transition-colors"
