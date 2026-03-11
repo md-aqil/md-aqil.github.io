@@ -1,6 +1,8 @@
 import { useEffect, useRef } from 'react';
 import { Brain, Eye, Target, Users, Lightbulb, TrendingUp } from 'lucide-react';
+import { Badge } from './ui/badge';
 import { gsap } from 'gsap';
+
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -93,37 +95,22 @@ const AboutSection = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent" />
       
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-20">
+        <div className="text-center mb-32 max-w-4xl mx-auto">
+          <Badge variant="outline" className="mb-8 px-4 py-1 border-primary/20 bg-primary/5 text-primary">Philosophy</Badge>
           <h2 
             ref={titleRef}
-            className="text-4xl md:text-6xl font-bold mb-6 font-satoshi"
+            className="text-5xl md:text-8xl font-black mb-8 leading-tight tracking-tighter"
           >
-            Why <span className="text-transparent bg-gradient-to-r from-primary to-accent bg-clip-text">
-              Behavior-Led Design
-            </span> Works
+            The Psychology <br />
+            <span className="text-transparent bg-gradient-to-r from-primary via-white to-primary bg-clip-text animate-gradient">
+              Behind the Design
+            </span>
           </h2>
-          <p className="text-body text-muted-foreground max-w-3xl mx-auto">
-            Great design isn't just about aesthetics—it's about understanding human psychology. 
-            I combine visual excellence with behavioral science to create experiences that not only look beautiful 
-            but also drive real business results.
+          <p className="text-xl text-muted-foreground font-medium leading-relaxed">
+            I don't just push pixels; I engineer behavior. By leveraging core psychological principles, 
+            I create digital products that feel intuitive, reduce friction, and naturally lead users 
+            toward desired outcomes.
           </p>
-        </div>
-
-        {/* Process Steps */}
-        <div className="mb-20">
-          <div className="flex flex-wrap justify-center gap-8 mb-12">
-            {['Research', 'Wireframe', 'Design', 'Test', 'Deliver'].map((step, index) => (
-              <div key={step} className="flex items-center">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-r from-primary to-accent flex items-center justify-center text-primary-foreground font-bold">
-                  {index + 1}
-                </div>
-                <div className="ml-3 text-lg font-medium">{step}</div>
-                {index < 4 && (
-                  <div className="hidden md:block w-8 h-px bg-gradient-to-r from-primary to-accent ml-6" />
-                )}
-              </div>
-            ))}
-          </div>
         </div>
 
         {/* Psychology Principles Grid */}
@@ -133,19 +120,22 @@ const AboutSection = () => {
             return (
               <div 
                 key={principle.title}
-                className="principle-card card-premium group cursor-pointer"
+                className="principle-card p-10 rounded-[40px] bg-white/[0.02] border border-white/5 hover:border-primary/20 transition-all duration-500 group relative overflow-hidden"
               >
-                <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${principle.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                  <IconComponent className="w-8 h-8 text-white" />
+                <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity" />
+                
+                <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${principle.color} flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500 shadow-xl`}>
+                  <IconComponent className="w-7 h-7 text-white" />
                 </div>
                 
-                <h3 className="text-xl font-bold mb-4 text-foreground group-hover:text-primary transition-colors">
+                <h3 className="text-2xl font-bold mb-4 tracking-tight group-hover:text-primary transition-colors">
                   {principle.title}
                 </h3>
                 
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-sm text-muted-foreground leading-relaxed font-medium">
                   {principle.description}
                 </p>
+
 
                 {/* Hover effect overlay */}
                 <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-accent/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
@@ -163,7 +153,10 @@ const AboutSection = () => {
             <p className="text-muted-foreground mb-6">
               Let's create experiences that understand your users better than they understand themselves.
             </p>
-            <button className="btn-glow px-8 py-3 rounded-xl font-semibold text-primary-foreground">
+            <button 
+              className="btn-glow px-8 py-3 rounded-xl font-semibold text-primary-foreground"
+              onClick={() => window.open('https://wa.me/917210562014', '_blank')}
+            >
               Start Your Project
             </button>
           </div>

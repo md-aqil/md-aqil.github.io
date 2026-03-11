@@ -167,16 +167,39 @@
     animation: float 20s ease-in-out infinite;
   }
 
-  @keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
+  /* Gradient Animation */
+  @keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
   }
 
-  /* Scroll reveal animations */
+  .animate-gradient {
+    animation: gradient 8s ease infinite;
+  }
+
+  /* Native Mobile App Feel */
+  @media (max-width: 768px) {
+    .glass {
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    }
+    
+    .mobile-tap {
+      @apply active:scale-95 transition-transform duration-100;
+    }
+
+    body {
+      padding-bottom: 100px; /* Space for bottom nav */
+    }
+  }
+
+  /* Smooth reveal animations */
   .reveal {
     opacity: 0;
     transform: translateY(30px);
-    transition: all 0.8s ease-out;
+    transition: all 0.8s cubic-bezier(0, 0.55, 0.45, 1);
   }
 
   .reveal.active {
@@ -186,20 +209,16 @@
 
   /* Custom scrollbar */
   ::-webkit-scrollbar {
-    width: 8px;
+    width: 6px;
   }
 
   ::-webkit-scrollbar-track {
-    background: hsl(220 15% 8%);
+    background: transparent;
   }
 
   ::-webkit-scrollbar-thumb {
-    background: var(--gradient-accent);
-    border-radius: 4px;
-  }
-
-  ::-webkit-scrollbar-thumb:hover {
-    background: hsl(45 100% 68%);
+    background: var(--primary);
+    border-radius: 10px;
   }
 }
 
@@ -210,5 +229,6 @@
 
   body {
     @apply bg-background text-foreground;
+    -webkit-tap-highlight-color: transparent;
   }
 }

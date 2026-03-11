@@ -1,7 +1,9 @@
 import { useEffect, useRef } from 'react';
 import { Brain, Palette, TrendingUp, Code, Users, Zap, ArrowRight } from 'lucide-react';
 import { Button } from './ui/button';
+import { Badge } from './ui/badge';
 import { gsap } from 'gsap';
+
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -112,74 +114,70 @@ const ServicesSection = () => {
   }, []);
 
   return (
-    <section id="services" ref={sectionRef} className="py-24 px-4 relative">
+    <section id="services" ref={sectionRef} className="py-24 px-6 relative overflow-hidden">
       {/* Background pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0 bg-gradient-to-r from-primary via-accent to-primary opacity-10" 
-             style={{ backgroundSize: '100px 100px', backgroundImage: 'radial-gradient(circle, currentColor 1px, transparent 1px)' }} />
+      <div className="absolute inset-0 opacity-[0.03] pointer-events-none">
+        <div className="absolute inset-0 bg-primary/20 blur-[120px] translate-y-1/2 rounded-full" />
       </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="text-center mb-20">
-          <h2 className="text-4xl md:text-6xl font-bold mb-6 font-satoshi">
-            How I Can Help You <span className="text-transparent bg-gradient-to-r from-primary to-accent bg-clip-text">
-              Win
+        <div className="text-center mb-32 max-w-4xl mx-auto">
+          <Badge variant="outline" className="mb-8 px-4 py-1 border-primary/20 bg-primary/5 text-primary">Offerings</Badge>
+          <h2 className="text-5xl md:text-8xl font-black mb-8 leading-tight tracking-tighter">
+            How I Help <br />
+            <span className="text-transparent bg-gradient-to-r from-primary via-white to-primary bg-clip-text animate-gradient">
+              Businesses Scale
             </span>
           </h2>
-          <p className="text-body text-muted-foreground max-w-3xl mx-auto">
-            From strategy to implementation, I provide end-to-end design solutions 
-            that combine beautiful aesthetics with behavioral psychology for maximum impact.
+          <p className="text-xl text-muted-foreground font-medium leading-relaxed">
+            I provide end-to-end design strategy that doesn't just look premium, it performs. 
+            From deep behavioral research to high-fidelity implementation.
           </p>
         </div>
 
         {/* Services Grid */}
-        <div className="services-grid grid grid-cols-1 md:grid-cols-2 gap-8 mb-24">
+        <div className="services-grid grid grid-cols-1 md:grid-cols-2 gap-10 mb-32">
           {services.map((service, index) => {
             const IconComponent = service.icon;
             return (
               <div 
                 key={service.title}
-                className="service-card card-premium group relative overflow-hidden"
+                className="service-card group p-12 rounded-[48px] bg-white/[0.02] border border-white/5 hover:border-primary/20 transition-all duration-700 relative overflow-hidden"
               >
-                {/* Tier badge */}
-                <div className="absolute top-6 right-6">
-                  <span className="px-3 py-1 text-xs font-semibold bg-primary/20 text-primary rounded-full border border-primary/30">
+                <div className="absolute top-0 right-0 p-8">
+                  <span className="px-4 py-1.5 text-[10px] font-black uppercase tracking-[0.2em] bg-primary/10 text-primary rounded-full border border-primary/20">
                     {service.tier}
                   </span>
                 </div>
 
-                {/* Icon */}
-                <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${service.gradient} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                <div className={`w-16 h-16 rounded-3xl bg-gradient-to-br ${service.gradient} flex items-center justify-center mb-10 group-hover:scale-110 transition-transform duration-500 shadow-2xl`}>
                   <IconComponent className="w-8 h-8 text-white" />
                 </div>
 
-                {/* Content */}
-                <h3 className="text-xl font-bold mb-4 group-hover:text-primary transition-colors">
+                <h3 className="text-3xl font-black mb-6 tracking-tight group-hover:text-primary transition-colors">
                   {service.title}
                 </h3>
 
-                <p className="text-muted-foreground mb-6 leading-relaxed">
+                <p className="text-lg text-muted-foreground mb-10 leading-relaxed font-medium">
                   {service.description}
                 </p>
 
-                {/* Features */}
-                <ul className="space-y-2 mb-6">
+                <ul className="space-y-4 mb-10">
                   {service.features.map((feature) => (
-                    <li key={feature} className="flex items-center text-sm text-muted-foreground">
-                      <div className="w-1.5 h-1.5 rounded-full bg-primary mr-3" />
+                    <li key={feature} className="flex items-center text-sm font-bold text-muted-foreground/80">
+                      <div className="w-2 h-2 rounded-full bg-primary/40 mr-4 group-hover:bg-primary transition-colors" />
                       {feature}
                     </li>
                   ))}
                 </ul>
 
-                {/* Hover arrow */}
-                <div className="flex items-center text-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <span className="text-sm font-medium mr-2">Learn More</span>
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </div>
-
-                {/* Hover glow effect */}
-                <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-accent/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <button 
+                  className="flex items-center gap-3 text-xs font-black uppercase tracking-[0.3em] text-white/40 group-hover:text-primary transition-all"
+                  onClick={() => window.open('https://wa.me/917210562014', '_blank')}
+                >
+                  Inquire Now
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform" />
+                </button>
               </div>
             );
           })}
@@ -228,7 +226,12 @@ const ServicesSection = () => {
               Let's discuss your specific needs and create a custom solution.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="premium" size="lg" className="group">
+              <Button 
+                variant="premium" 
+                size="lg" 
+                className="group"
+                onClick={() => window.open('https://wa.me/917210562014', '_blank')}
+              >
                 Get Custom Quote
                 <Zap className="w-5 h-5 group-hover:scale-110 transition-transform" />
               </Button>

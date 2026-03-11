@@ -23,58 +23,54 @@ const Navigation = () => {
   };
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'glass backdrop-blur-xl border-b border-white/10' : 'bg-transparent'
+    <nav className={`fixed top-6 left-1/2 -translate-x-1/2 z-50 transition-all duration-500 w-[95%] max-w-5xl ${
+      isScrolled ? 'px-1' : 'px-0'
     }`}>
-      <div className="max-w-7xl mx-auto px-4 py-4">
+      <div className={`transition-all duration-500 rounded-full border border-white/5 ${
+        isScrolled 
+          ? 'bg-black/40 backdrop-blur-2xl px-6 py-3 shadow-[0_8px_32px_rgba(0,0,0,0.4)]' 
+          : 'bg-transparent py-4 px-4'
+      }`}>
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="text-xl font-bold text-foreground">
-            Md Aqil
-          </div>
+          <Link to="/" className="text-xl font-black tracking-tighter text-foreground group">
+            MD <span className="text-primary group-hover:italic transition-all">AQIL</span>
+          </Link>
 
           {/* Navigation Links */}
-          <div className="hidden md:flex items-center space-x-8">
-            <button 
-              onClick={() => scrollToSection('about')}
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-            >
-              About
-            </button>
-            <Link 
-              to="/work"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Work
-            </Link>
-            <button 
-              onClick={() => scrollToSection('services')}
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Services
-            </button>
-            <button 
-              onClick={() => scrollToSection('contact')}
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Contact
-            </button>
+          <div className="hidden md:flex items-center bg-white/5 rounded-full px-2 py-1 border border-white/5">
+            {[
+              { label: 'About', id: 'about' },
+              { label: 'Work', id: 'work' },
+              { label: 'Services', id: 'services' },
+              { label: 'Contact', id: 'contact' }
+            ].map((link) => (
+              <button 
+                key={link.id}
+                onClick={() => scrollToSection(link.id)}
+                className="px-6 py-2 text-[10px] font-bold uppercase tracking-widest text-muted-foreground hover:text-white transition-all hover:bg-white/5 rounded-full"
+              >
+                {link.label}
+              </button>
+            ))}
           </div>
 
           {/* Theme Toggle & CTA */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2">
             <ThemeToggle />
             <Button 
-              variant="glass" 
+              variant="premium" 
               size="sm"
-              onClick={() => scrollToSection('contact')}
+              className="rounded-full px-6 font-bold text-[10px] uppercase tracking-widest"
+              onClick={() => window.open('https://wa.me/917210562014', '_blank')}
             >
-              Let's Talk
+              Start Project
             </Button>
           </div>
         </div>
       </div>
     </nav>
+
   );
 };
 

@@ -12,6 +12,25 @@ export type CaseStudy = {
 
 export const caseStudies: CaseStudy[] = [
   {
+    id: 'changecaptain',
+    title: 'Change Captain',
+    client: 'ChangeCaptain.co',
+    challenge:
+      'Finance teams lacked visibility into engineering ROI, while developers were burdened by manual R&D tax credit tagging and labor capitalization tracking.',
+    process:
+      'Designed a code-as-truth automation platform that eliminates manual tagging. Developed a complex interactive ROI calculator and unified technical activity with GAAP/IFRS compliance.',
+    psychology:
+      'Leveraged the "Power of Objectivity" through automated data, reducing cognitive load for finance teams and friction for engineering teams.',
+    results: {
+      savings: '+50%',
+      visibility: '100%',
+      efficiency: '+40%'
+    },
+    image:
+      '/changecaptain-mockup.png', 
+    tags: ['FinTech', 'SaaS', 'Automation', 'Wordpress']
+  },
+  {
     id: 'deerika-grocery',
     title: 'Deerika Grocery App',
     client: 'Deerika.in',
@@ -27,82 +46,37 @@ export const caseStudies: CaseStudy[] = [
       satisfaction: '+92%'
     },
     image:
-      'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&h=600&fit=crop',
+      '/deerika-mockup.png',
     tags: ['E-commerce', 'Mobile App', 'Grocery Delivery']
   },
   {
-    id: 'saas-dashboard',
-    title: 'SaaS Dashboard Redesign',
-    client: 'TechFlow Analytics',
-    challenge:
-      'Users were abandoning the complex analytics dashboard, leading to poor retention rates.',
-    process:
-      "Conducted user interviews, simplified navigation using Hick's Law, and implemented progressive disclosure.",
-    psychology: 'Applied cognitive load theory to reduce information density by 60%',
+    id: 'velvet-reel',
+    title: 'The Velvet Reel',
+    client: 'Velvet Reel Entertainment',
+    challenge: 'Redefining the talent acquisition landscape by creating a premium, psychology-led platform for actors, models, and directors to build elite portfolios.',
+    process: 'Combining high-fashion editorial aesthetics with a robust recruitment engine and automated talent verification workflows.',
+    psychology: 'Self-Determination Theory & Social Proof',
     results: {
-      engagement: '+142%',
-      retention: '+85%',
-      satisfaction: '+94%'
+      growth: '+142%',
+      talents: '5,000+',
+      efficiency: '60%'
     },
-    image:
-      'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop',
-    tags: ['UX Research', 'Dashboard Design', 'B2B SaaS']
+    image: '/velvetreel-mockup.png',
+    tags: ['Entertainment', 'Marketplace', 'Next.js']
   },
   {
-    id: 'ecommerce-app',
-    title: 'E-commerce Mobile App',
-    client: 'StyleHub Fashion',
-    challenge:
-      'Low conversion rates on mobile checkout flow, with 68% cart abandonment.',
-    process:
-      'Redesigned checkout using loss aversion principles and social proof indicators.',
-    psychology:
-      'Leveraged scarcity psychology and simplified decision-making pathways',
+    id: 'stay-clueless',
+    title: 'Stay Clueless',
+    client: 'StayClueless.com',
+    challenge: 'Transforming a streetwear brand into a lifestyle movement for travelers. The goal was to bridge high-fashion aesthetics with e-commerce conversion optimization.',
+    process: 'Developed a storytelling-first digital storefront with interactive collection reveals and a seamless mobile-native shopping experience.',
+    psychology: 'Social Identity & Scarcity Principle',
     results: {
-      conversion: '+156%',
-      revenue: '+89%',
-      completion: '+134%'
+      growth: '+210%',
+      community: '10k+',
+      conversion: '+45%'
     },
-    image:
-      'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=600&fit=crop',
-    tags: ['Mobile Design', 'E-commerce', 'Conversion Optimization']
-  },
-  {
-    id: 'fintech-landing',
-    title: 'FinTech Landing Page',
-    client: 'CryptoVault',
-    challenge:
-      'Complex financial product needed clear communication to build trust with new users.',
-    process:
-      'Applied behavioral economics to design trust-building elements and clear value propositions.',
-    psychology:
-      'Used authority bias and social proof to overcome financial service skepticism',
-    results: {
-      signups: '+203%',
-      engagement: '+78%',
-      trust: '+167%'
-    },
-    image:
-      'https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=800&h=600&fit=crop',
-    tags: ['Landing Page', 'FinTech', 'Trust Building']
-  },
-  {
-    id: 'vaclav-fashion',
-    title: 'Vaclav Fashion',
-    client: 'Vaclav',
-    challenge:
-      'The fashion market often separates sustainability and luxury, with limited focus on inclusive sizing and timeless styles.',
-    process:
-      'Designed a mobile-first, minimal, luxury e-commerce experience with strong brand storytelling, sizing guides, and community features.',
-    psychology:
-      'Leveraged authority and social proof with storytelling, inclusive imagery, and transparency to build trust and desirability.',
-    results: {
-      recognition: 'Luxury label status',
-      followers: '19K Instagram',
-      satisfaction: 'High NPS'
-    },
-    image:
-      'https://images.unsplash.com/photo-1520975916090-3105956dac38?w=800&h=600&fit=crop',
-    tags: ['Fashion', 'E-commerce', 'Sustainability']
+    image: '/stayclueless-mockup.png',
+    tags: ['Streetwear', 'E-commerce', 'Lifestyle']
   }
 ];

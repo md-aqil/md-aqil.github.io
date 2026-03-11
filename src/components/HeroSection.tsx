@@ -156,25 +156,27 @@ const HeroSection = () => {
       </div>
 
       {/* Main content */}
-      <div className="relative z-10 text-center max-w-6xl mx-auto px-4">
+      <div className="relative z-10 text-center max-w-6xl mx-auto px-4 pt-32 md:pt-40 pb-32">
         <h1 
           ref={titleRef}
-          className="text-hero mb-6 leading-tight"
+
+
+          className="text-4xl md:text-7xl font-black mb-8 leading-[1.1] tracking-tight"
         >
-          Designs That Think.
+          Designs That <span className="text-primary italic">Think</span>.
           <br />
-          <span className="text-transparent bg-gradient-to-r from-accent to-primary bg-clip-text">
+          <span className="text-transparent bg-gradient-to-r from-accent via-primary to-accent bg-clip-text bg-[length:200%_auto] animate-gradient">
             Interfaces That Convert.
           </span>
         </h1>
         
         <p 
           ref={subtitleRef}
-          className="text-large text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed"
+          className="text-lg md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed font-medium"
         >
-          I'm <span className="text-primary font-semibold">Md Aqil</span> — I design digital experiences backed by user psychology, 
-          crafted for real business impact. Every pixel serves a purpose.
+          I'm <span className="text-foreground font-bold underline decoration-primary/50 decoration-4 underline-offset-4">Md Aqil</span> — a UX Designer crafting digital experiences backed by psychology. Every pixel serves a business purpose.
         </p>
+
 
         <div 
           ref={ctaRef}
@@ -193,6 +195,7 @@ const HeroSection = () => {
             variant="hero" 
             size="xl"
             className="group"
+            onClick={() => window.open('https://wa.me/917210562014', '_blank')}
           >
             Let's Collaborate
             <Brain className="w-5 h-5 group-hover:scale-110 transition-transform" />

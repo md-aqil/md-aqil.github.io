@@ -14,7 +14,7 @@ const Work = () => {
     <main>
       <section className="pt-28 pb-10 px-4">
         <div className="max-w-6xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4">Work & Case Studies</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">Work & Case Studies</h1>
           <p className="text-muted-foreground max-w-3xl mx-auto">
             A curated selection of product design projects, blending behavioral psychology with clean, modern interfaces that drive measurable results.
           </p>
@@ -69,6 +69,9 @@ const Work = () => {
                   className="group"
                   onClick={() => {
                     if (study.id === 'deerika-grocery') navigate('/deerika-case-study');
+                    else if (study.id === 'changecaptain') navigate('/changecaptain-case-study');
+                    else if (study.id === 'velvet-reel') navigate('/velvet-reel-case-study');
+                    else if (study.id === 'stay-clueless') navigate('/stay-clueless-case-study');
                     else navigate(`/case-study/${study.id}`);
                   }}
                 >

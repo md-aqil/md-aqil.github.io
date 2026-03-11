@@ -7,10 +7,15 @@ import { ThemeProvider } from "next-themes";
 import Index from "./pages/Index";
 import CaseStudyDetail from "./pages/CaseStudyDetail";
 import DeerikaCaseStudy from "./pages/DeerikaCaseStudy";
+import ChangeCaptainCaseStudy from "./pages/ChangeCaptainCaseStudy";
+import VelvetReelCaseStudy from './pages/VelvetReelCaseStudy';
+import StayCluelessCaseStudy from './pages/StayCluelessCaseStudy';
 import Work from "./pages/Work";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
+
+import MobileNav from "./components/MobileNav";
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
@@ -23,14 +28,19 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/work" element={<Work />} />
             <Route path="/deerika-case-study" element={<DeerikaCaseStudy />} />
+            <Route path="/changecaptain-case-study" element={<ChangeCaptainCaseStudy />} />
+            <Route path="/velvet-reel-case-study" element={<VelvetReelCaseStudy />} />
+            <Route path="/stay-clueless-case-study" element={<StayCluelessCaseStudy />} />
             <Route path="/case-study/:slug" element={<CaseStudyDetail />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
+          <MobileNav />
         </BrowserRouter>
       </TooltipProvider>
     </ThemeProvider>
   </QueryClientProvider>
 );
+
 
 export default App;
