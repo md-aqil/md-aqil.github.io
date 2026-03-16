@@ -20,6 +20,7 @@ import NotFound from "./pages/NotFound";
 const queryClient = new QueryClient();
 
 import MobileNav from "./components/MobileNav";
+import WhatsAppButton from "./components/WhatsAppButton";
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
@@ -44,6 +45,7 @@ const App = () => (
             <Route path="*" element={<NotFound />} />
           </Routes>
           <MobileNav />
+          <WhatsAppButton />
         </BrowserRouter>
       </TooltipProvider>
     </ThemeProvider>

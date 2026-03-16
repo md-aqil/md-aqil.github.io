@@ -21,7 +21,7 @@ const Index = () => {
         <div className="max-w-7xl mx-auto text-center">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="text-sm text-muted-foreground">
-              © 2024 Md Aqil. Crafted with psychology & precision.
+              © 2026 Md Aqil. Crafted with psychology & precision.
             </div>
             <div className="text-sm text-muted-foreground">
               Available for select projects only

@@ -6,7 +6,7 @@ import {
   Mail, 
   Phone, 
   MapPin, 
-  Linkedin, 
+  Palette, 
   Github, 
   Globe, 
   Briefcase, 
@@ -81,7 +81,7 @@ const Resume = () => {
             <div className="flex items-center gap-3">
               <div className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse" />
               <span className="text-[10px] font-black uppercase tracking-[0.3em] text-amber-400">
-                Resume — 2024 Edition
+                Resume — 2026 Edition
               </span>
             </div>
             <Button 
@@ -194,8 +194,16 @@ const Resume = () => {
                   <div className="flex items-start gap-4 text-white/60"><MapPin size={16} /><span className="text-sm font-medium">Noida, Uttar Pradesh, India 201304</span></div>
                 </div>
                 <div className="flex gap-4 pt-4 border-t border-white/5">
-                  {[Linkedin, Github, Globe].map((Icon, i) => (
-                    <div key={i} className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-white/60"><Icon size={18} /></div>
+                  {[Palette, Github, Globe].map((Icon, i) => (
+                    <a 
+                      key={i} 
+                      href={i === 0 ? "https://www.behance.net/aqilali" : i === 1 ? "https://github.com/md-aqil" : "#"}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-white/60 hover:border-amber-400/50 hover:text-amber-400 transition-all"
+                    >
+                      <Icon size={18} />
+                    </a>
                   ))}
                 </div>
               </section>
@@ -327,7 +335,7 @@ const Resume = () => {
           </div>
 
           <div className="mt-12 text-center text-[10px] text-gray-400 italic">
-            Portfolio: md-aqil.github.io | LinkedIn: md-aqil-09430a109
+            Portfolio: md-aqil.github.io | Behance: behance.net/aqilali
           </div>
         </div>
       </div>

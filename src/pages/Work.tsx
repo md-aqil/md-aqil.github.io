@@ -126,7 +126,7 @@ const Footer = () => (
   <footer style={{ borderTop: '1px solid rgba(255,255,255,0.05)' }} className="py-10 px-6">
     <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-3">
       <div className="text-[10px] text-white/20 font-black uppercase tracking-[0.25em]">
-        © 2024 Md Aqil — Psychology-led Design
+        © 2026 Md Aqil — Psychology-led Design
       </div>
       <div className="text-[10px] text-white/20 font-black uppercase tracking-[0.25em]">
         Available for select projects only
