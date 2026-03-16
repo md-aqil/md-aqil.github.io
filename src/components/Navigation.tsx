@@ -60,6 +60,7 @@ const Navigation = () => {
             {[
               { label: 'About', id: 'about' },
               { label: 'Work', id: 'work', path: '/work' },
+              { label: 'Resume', id: 'resume', path: '/resume' },
               { label: 'Services', id: 'services' },
               { label: 'Contact', id: 'contact' }
             ].map((link) => (

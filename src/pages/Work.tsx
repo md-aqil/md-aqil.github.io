@@ -252,7 +252,7 @@ const Work = () => {
               { v: '7+', l: 'Projects shipped' },
               { v: '500k+', l: 'Users impacted' },
               { v: '3× avg', l: 'Conversion uplift' },
-              { v: '5 yrs', l: 'Design experience' },
+              { v: '8 yrs', l: 'Design experience' },
             ].map(({ v, l }, i) => (
               <div
                 key={v}

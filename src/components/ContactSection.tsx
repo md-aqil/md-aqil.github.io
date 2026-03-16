@@ -109,18 +109,9 @@ const ContactSection = () => {
               "MD Aqil doesn't just design interfaces—he crafts experiences that understand user psychology. 
               Our conversion rate improved by 180% within weeks of launch."
             </blockquote>
-            <div className="flex items-center justify-center gap-4">
-              <div className="w-14 h-14 rounded-full border-2 border-primary/20 p-1">
-                <img 
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face" 
-                  alt="Client"
-                  className="w-full h-full rounded-full object-cover"
-                />
-              </div>
-              <div className="text-left">
-                <div className="font-black text-lg">Sarah Chen</div>
-                <div className="text-xs font-bold uppercase tracking-widest text-primary">CEO, TechFlow Analytics</div>
-              </div>
+            <div className="flex flex-col items-center justify-center text-center">
+              <div className="font-black text-lg">Sarah Chen</div>
+              <div className="text-xs font-bold uppercase tracking-widest text-primary">CEO, TechFlow Analytics</div>
             </div>
           </div>
         </div>

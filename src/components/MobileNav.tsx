@@ -29,7 +29,7 @@ const MobileNav = () => {
   };
 
   return (
-    <nav className="md:hidden fixed bottom-6 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-md">
+    <nav className="md:hidden fixed bottom-6 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-md print:hidden">
       <div className="bg-background/80 backdrop-blur-2xl border border-white/10 rounded-full py-3 px-6 shadow-2xl flex items-center justify-between">
         {navItems.map((item) => {
           const Icon = item.icon;
