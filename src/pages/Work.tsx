@@ -222,7 +222,7 @@ const Work = () => {
 
           {/* Headline */}
           <h1
-            className="wc-item text-[clamp(3rem,9vw,8rem)] font-black tracking-tighter leading-[0.85] mb-6"
+            className="wc-item text-[clamp(2.5rem,8vw,7rem)] font-black tracking-tighter leading-[0.9] mb-6"
             data-delay="80"
           >
             Work &amp;{' '}
@@ -247,7 +247,7 @@ const Work = () => {
           </p>
 
           {/* Stats row */}
-          <div className="wc-item flex flex-wrap gap-0 divide-x" data-delay="240" style={{ borderColor: 'rgba(255,255,255,0.08)' }}>
+          <div className="wc-item grid grid-cols-2 lg:grid-cols-4 gap-y-8 divide-x-0 lg:divide-x border-y lg:border-none border-white/5 py-8 lg:py-0" data-delay="240" style={{ borderColor: 'rgba(255,255,255,0.08)' }}>
             {[
               { v: '7+', l: 'Projects shipped' },
               { v: '500k+', l: 'Users impacted' },
@@ -256,7 +256,7 @@ const Work = () => {
             ].map(({ v, l }, i) => (
               <div
                 key={v}
-                className="px-8 first:pl-0 flex flex-col gap-1"
+                className="px-6 lg:px-8 flex flex-col gap-1 lg:first:pl-0"
                 style={{ borderColor: 'rgba(255,255,255,0.08)' }}
               >
                 <span
@@ -273,7 +273,7 @@ const Work = () => {
       </section>
 
       {/* ═══════════════════════════════════════════════ BODY (sidebar + cards) ══ */}
-      <div className="max-w-7xl mx-auto px-6 pb-28 pt-6 flex gap-8 items-start">
+      <div className="max-w-7xl mx-auto px-6 pb-28 pt-6 flex flex-col lg:flex-row gap-12 items-stretch lg:items-start">
 
         {/* ── Sticky Vertical Filter Sidebar ── */}
         <aside
@@ -368,9 +368,9 @@ const Work = () => {
         </aside>
 
         {/* ── Mobile horizontal filter (shown < lg) ── */}
-        <div className="lg:hidden mb-6 w-full">
+        <div className="lg:hidden mb-10 w-full overflow-x-auto no-scrollbar pb-2">
           <div
-            className="flex gap-1.5 flex-wrap w-fit rounded-2xl p-1.5"
+            className="flex gap-2 w-max rounded-2xl p-1.5"
             style={{
               background: 'rgba(15,17,25,0.80)',
               backdropFilter: 'blur(24px)',
@@ -381,7 +381,7 @@ const Work = () => {
               <button
                 key={f}
                 onClick={() => setActiveFilter(f)}
-                className="px-4 py-2 rounded-xl text-[10px] font-black uppercase tracking-widest transition-all duration-300"
+                className="px-5 py-2.5 rounded-xl text-[10px] font-black uppercase tracking-widest transition-all duration-300 whitespace-nowrap"
                 style={
                   activeFilter === f
                     ? { background: 'hsl(45,100%,72%)', color: '#000', boxShadow: '0 4px 20px hsl(45,100%,72%/0.25)' }
@@ -395,7 +395,7 @@ const Work = () => {
         </div>
 
         {/* ── Cards column ── */}
-        <main className="flex-1 min-w-0" ref={cardsRef}>
+        <main className="flex-1 w-full min-w-0" ref={cardsRef}>
           <div className="space-y-6">
             {filtered.map((study, index) => (
               <article
@@ -418,10 +418,10 @@ const Work = () => {
                 onClick={() => navigate(getStudyPath(study.id))}
               >
                 {/* Inner layout */}
-                <div className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} min-h-[420px]`}>
+                <div className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} lg:min-h-[420px]`}>
 
                   {/* ── Image panel ── */}
-                  <div className="lg:w-[52%] relative overflow-hidden" style={{ minHeight: 320 }}>
+                  <div className="w-full lg:w-[52%] relative overflow-hidden" style={{ minHeight: 280 }}>
                     <CardImage
                       src={study.image}
                       alt={study.title}
@@ -459,7 +459,7 @@ const Work = () => {
                   </div>
 
                   {/* ── Content panel ── */}
-                  <div className="lg:w-[48%] flex flex-col justify-between p-8 lg:p-12 gap-8">
+                  <div className="lg:w-[48%] flex flex-col justify-between p-6 md:p-10 lg:p-12 gap-8">
                     {/* Top: badge + title + tags + description */}
                     <div className="space-y-5">
                       <div className="flex items-center gap-3">
@@ -507,18 +507,18 @@ const Work = () => {
                     <div className="space-y-7">
                       {/* Metrics */}
                       <div
-                        className="grid grid-cols-3 gap-4 py-6"
+                        className="grid grid-cols-2 sm:grid-cols-3 gap-6 py-8"
                         style={{ borderTop: '1px solid rgba(255,255,255,0.06)', borderBottom: '1px solid rgba(255,255,255,0.06)' }}
                       >
                         {Object.entries(study.results).map(([key, value]) => (
-                          <div key={key} className="flex flex-col gap-1.5">
+                          <div key={key} className="flex flex-col gap-2">
                             <div
-                              className="text-2xl lg:text-3xl font-black tracking-tighter transition-colors duration-500 group-hover:text-amber-400"
+                              className="text-2xl sm:text-3xl font-black tracking-tighter transition-colors duration-500 group-hover:text-amber-400"
                               style={{ color: 'white' }}
                             >
                               {value}
                             </div>
-                            <div className="text-[9px] font-black uppercase tracking-widest text-white/25 leading-tight">
+                            <div className="text-[10px] font-black uppercase tracking-widest text-white/25 leading-tight">
                               {key}
                             </div>
                           </div>
@@ -586,7 +586,7 @@ const Work = () => {
               }}
             />
 
-            <div className="relative z-10 text-center py-20 px-8">
+            <div className="relative z-10 text-center py-16 px-6 lg:py-24 lg:px-12">
               <div
                 className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6 text-[10px] font-black uppercase tracking-[0.25em]"
                 style={{ background: 'hsl(45,100%,72%/0.1)', border: '1px solid hsl(45,100%,72%/0.2)', color: 'hsl(45,100%,72%)' }}
