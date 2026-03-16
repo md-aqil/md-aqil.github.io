@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { Calendar, MessageCircle, ArrowRight, Mail, Palette, Twitter, Dribbble } from 'lucide-react';
+import { Calendar, MessageCircle, ArrowRight, Mail, Linkedin, Twitter, Palette } from 'lucide-react';
 import { Button } from './ui/button';
 import { Badge } from './ui/badge';
 import { gsap } from 'gsap';
@@ -170,6 +170,17 @@ const ContactSection = () => {
           {/* Social Links */}
           <div className="flex justify-center gap-8 items-center pt-8 border-t border-white/5">
             <a 
+              href="https://linkedin.com/in/md-aquil-09430a109" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="social-icon flex items-center gap-3 text-sm font-bold text-muted-foreground hover:text-white transition-all group"
+            >
+              <div className="p-3 rounded-2xl bg-white/5 border border-white/10 group-hover:border-primary/50 transition-colors">
+                <Linkedin size={20} />
+              </div>
+              <span className="hidden md:inline tracking-widest uppercase text-[10px]">LinkedIn</span>
+            </a>
+            <a 
               href="https://www.behance.net/aqilali" 
               target="_blank" 
               rel="noopener noreferrer"
@@ -179,17 +190,6 @@ const ContactSection = () => {
                 <Palette size={20} />
               </div>
               <span className="hidden md:inline tracking-widest uppercase text-[10px]">Behance</span>
-            </a>
-            <a 
-              href="https://dribbble.com/md-aqil" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="social-icon flex items-center gap-3 text-sm font-bold text-muted-foreground hover:text-white transition-all group"
-            >
-              <div className="p-3 rounded-2xl bg-white/5 border border-white/10 group-hover:border-primary/50 transition-colors">
-                <Dribbble size={20} />
-              </div>
-              <span className="hidden md:inline tracking-widest uppercase text-[10px]">Dribbble</span>
             </a>
             <a 
               href="mailto:aqilali381@gmail.com" 

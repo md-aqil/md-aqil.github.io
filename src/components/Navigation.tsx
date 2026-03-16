@@ -68,20 +68,20 @@ const Navigation = () => {
         
         <div className="flex gap-4 items-center">
           <a 
+            href="https://linkedin.com/in/md-aquil-09430a109" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-[10px] font-black uppercase tracking-widest text-muted-foreground hover:text-white transition-all"
+          >
+            LinkedIn
+          </a>
+          <a 
             href="https://www.behance.net/aqilali" 
             target="_blank" 
             rel="noopener noreferrer"
             className="text-[10px] font-black uppercase tracking-widest text-muted-foreground hover:text-white transition-all"
           >
             Behance
-          </a>
-          <a 
-            href="https://dribbble.com/md-aqil" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="text-[10px] font-black uppercase tracking-widest text-muted-foreground hover:text-white transition-all"
-          >
-            Dribbble
           </a>
         </div>
       </div>
