@@ -11,6 +11,9 @@ import ChangeCaptainCaseStudy from "./pages/ChangeCaptainCaseStudy";
 import VelvetReelCaseStudy from './pages/VelvetReelCaseStudy';
 import StayCluelessCaseStudy from './pages/StayCluelessCaseStudy';
 import Work from "./pages/Work";
+import HoussyCaseStudy from "./pages/HoussyCaseStudy";
+import GoatXCaseStudy from "./pages/GoatXCaseStudy";
+import ExoticCaseStudy from "./pages/ExoticCaseStudy";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -31,6 +34,9 @@ const App = () => (
             <Route path="/changecaptain-case-study" element={<ChangeCaptainCaseStudy />} />
             <Route path="/velvet-reel-case-study" element={<VelvetReelCaseStudy />} />
             <Route path="/stay-clueless-case-study" element={<StayCluelessCaseStudy />} />
+            <Route path="/houssy-case-study" element={<HoussyCaseStudy />} />
+            <Route path="/goatx-case-study" element={<GoatXCaseStudy />} />
+            <Route path="/exotic-case-study" element={<ExoticCaseStudy />} />
             <Route path="/case-study/:slug" element={<CaseStudyDetail />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />

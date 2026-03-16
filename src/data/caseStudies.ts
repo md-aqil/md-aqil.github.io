@@ -78,5 +78,59 @@ export const caseStudies: CaseStudy[] = [
     },
     image: '/stayclueless-mockup.png',
     tags: ['Streetwear', 'E-commerce', 'Lifestyle']
+  },
+  {
+    id: 'houssy',
+    title: 'Houssy.in',
+    client: 'Houssy.in',
+    challenge:
+      'Homebuyers in India faced a fragmented, trust-deficient property search experience — overwhelming listings, zero personalization, and no transparency in the buyer journey.',
+    process:
+      'Designed a psychology-led property discovery platform with curated listings, visual storytelling, a smart filter UX, and a seamless inquiry-to-viewing pipeline that builds trust at every step.',
+    psychology:
+      'Choice Architecture & Trust Signaling — reducing decision paralysis by surfacing the right properties at the right time with social proof and verified badges.',
+    results: {
+      inquiries: '+320%',
+      trust: '+85%',
+      conversion: '+60%'
+    },
+    image: '/houssy-mockup.png',
+    tags: ['Real Estate', 'PropTech', 'UI/UX Design']
+  },
+  {
+    id: 'goatx',
+    title: 'GoatX',
+    client: 'GoatX.io',
+    challenge:
+      'Bridging the gap between traditional goat farming and Web3 investors — creating a credible, transparent, and visually compelling DeFi platform for fractional on-chain livestock ownership.',
+    process:
+      'Designed a full Web3 landing page from the ground up, including NFT tier architecture, dual-token economy visualization, live asset verification UI, an interactive roadmap, and a tokenomics dashboard.',
+    psychology:
+      'Trust Architecture & Novelty Effect — using radical transparency (live farm CCTV feeds, blockchain-verified tags) and premium visual storytelling to convert Web3 skeptics into early investors.',
+    results: {
+      'NFT Tiers': '4 Designed',
+      'Trust UX': 'Full Stack',
+      'Roadmap': '4 Phases'
+    },
+    image: '/goatx-mockup.png',
+    tags: ['Web3', 'Blockchain', 'DeFi', 'NFT']
+  },
+  {
+    id: 'exotic',
+    title: 'Exotic',
+    client: 'exoticstore.in',
+    challenge:
+      'Designing a premium e-commerce brand identity and Shopify storefront for a women\'s luxury handbag label — making artisan leather goods feel aspirational, discoverable, and effortless to purchase online.',
+    process:
+      'Built a full visual identity system and e-commerce UI — including logo, color system, collection page layouts, product detail pages, promotional banners, and marketing creatives for Amazon, Myntra, and direct D2C.',
+    psychology:
+      'Aspirational Identity & Sensory Substitution — using rich imagery, editorial typography, and a magenta-gold palette to trigger tactile desire and luxury association in a purely digital shopping experience.',
+    results: {
+      'Channels': '3 Platforms',
+      'Collections': '6+ Designed',
+      'Brand System': 'Complete'
+    },
+    image: '',
+    tags: ['E-Commerce', 'Brand Identity', 'Fashion', 'UI/UX']
   }
 ];

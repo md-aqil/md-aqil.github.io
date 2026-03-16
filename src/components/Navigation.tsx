@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { ThemeToggle } from '@/components/ThemeToggle';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,10 +17,26 @@ const Navigation = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+  const handleNavClick = (id: string, path?: string) => {
+    if (path) {
+      navigate(path);
+      window.scrollTo(0, 0);
+      return;
+    }
+
+    if (location.pathname !== '/') {
+      navigate('/');
+      setTimeout(() => {
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    } else {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
     }
   };
 
@@ -41,13 +59,13 @@ const Navigation = () => {
           <div className="hidden md:flex items-center bg-white/5 rounded-full px-2 py-1 border border-white/5">
             {[
               { label: 'About', id: 'about' },
-              { label: 'Work', id: 'work' },
+              { label: 'Work', id: 'work', path: '/work' },
               { label: 'Services', id: 'services' },
               { label: 'Contact', id: 'contact' }
             ].map((link) => (
               <button 
                 key={link.id}
-                onClick={() => scrollToSection(link.id)}
+                onClick={() => handleNavClick(link.id, link.path)}
                 className="px-6 py-2 text-[10px] font-bold uppercase tracking-widest text-muted-foreground hover:text-white transition-all hover:bg-white/5 rounded-full"
               >
                 {link.label}

@@ -134,6 +134,12 @@ const CaseStudiesSection = () => {
                         navigate('/velvet-reel-case-study');
                       } else if (study.id === 'stay-clueless') {
                         navigate('/stay-clueless-case-study');
+                      } else if (study.id === 'houssy') {
+                        navigate('/houssy-case-study');
+                      } else if (study.id === 'goatx') {
+                        navigate('/goatx-case-study');
+                      } else if (study.id === 'exotic') {
+                        navigate('/exotic-case-study');
                       } else {
                         navigate(`/case-study/${study.id}`);
                       }
