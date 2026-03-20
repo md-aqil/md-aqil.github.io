@@ -185,25 +185,14 @@ const ExoticCaseStudy = () => {
           <div className="relative group">
             <div className="absolute -inset-6 rounded-[60px] blur-3xl opacity-30 pointer-events-none" style={{ background: 'linear-gradient(135deg, rgba(167,13,90,0.15), rgba(212,175,55,0.1))' }} />
             <div
-              className="relative rounded-[40px] overflow-hidden border flex flex-col items-center justify-center aspect-[4/3] gap-6"
+              className="relative rounded-[40px] overflow-hidden border aspect-[4/3] shadow-2xl"
               style={{ borderColor: 'rgba(167,13,90,0.12)', background: 'linear-gradient(135deg, rgba(167,13,90,0.04), rgba(212,175,55,0.04))' }}
             >
-              {/* Placeholder waiting for image */}
-              <div className="flex flex-col items-center gap-4 py-12 px-8 text-center">
-                <div
-                  className="w-20 h-20 rounded-full flex items-center justify-center"
-                  style={{ background: 'rgba(167,13,90,0.08)', border: '1px solid rgba(167,13,90,0.15)' }}
-                >
-                  <ImageOff className="w-8 h-8" style={{ color: '#A70D5A', opacity: 0.5 }} />
-                </div>
-                <div>
-                  <p className="text-sm font-bold font-sans" style={{ color: '#A70D5A', opacity: 0.7 }}>Image Coming Soon</p>
-                  <p className="text-xs font-sans mt-1" style={{ color: '#A70D5A', opacity: 0.4 }}>
-                    Place your mockup at<br />
-                    <code className="text-[10px]">/public/exotic-mockup.png</code>
-                  </p>
-                </div>
-              </div>
+              <img 
+                src="/exotic-mockup.png" 
+                alt="Exotic Mockup UI" 
+                className="w-full h-full object-cover transition-transform duration-[1200ms] group-hover:scale-105"
+              />
 
               {/* Brand color swatches — decorative */}
               <div className="absolute bottom-6 left-6 right-6 flex items-center gap-3 font-sans">

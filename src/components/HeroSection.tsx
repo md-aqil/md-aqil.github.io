@@ -1,10 +1,12 @@
 import { useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Button } from './ui/button';
 import { ArrowRight, Brain, Zap } from 'lucide-react';
 import { gsap } from 'gsap';
 import heroImage from '../assets/hero-bg.jpg';
 
 const HeroSection = () => {
+  const navigate = useNavigate();
   const heroRef = useRef<HTMLDivElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
   const subtitleRef = useRef<HTMLParagraphElement>(null);
@@ -186,6 +188,7 @@ const HeroSection = () => {
             variant="premium" 
             size="xl"
             className="group"
+            onClick={() => navigate('/work')}
           >
             Explore My Work
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

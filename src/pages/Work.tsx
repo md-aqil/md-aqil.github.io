@@ -14,11 +14,13 @@ const getStudyPath = (id: string) => {
     'houssy':          '/houssy-case-study',
     'goatx':           '/goatx-case-study',
     'exotic':          '/exotic-case-study',
+    'tpm':             '/tpm-case-study',
+    'career-talks':    '/career-talks-case-study',
   };
   return map[id] ?? `/case-study/${id}`;
 };
 
-const ALL_FILTERS = ['All', 'E-commerce', 'SaaS', 'Mobile App', 'Web3', 'Brand Identity', 'FinTech'];
+const ALL_FILTERS = ['All', 'E-commerce', 'SaaS', 'Mobile App', 'Web3', 'Brand Identity', 'FinTech', 'WordPress'];
 
 // ─── Per-project fallback palette (used when no mockup image is present) ─────
 const PROJECT_PALETTES: Record<string, { bg: string; accent: string; glow: string }> = {
@@ -103,16 +105,28 @@ const CardImage = ({
 
   if (broken) return <FallbackPanel id={id} title={title} />;
 
+  const isVideo = src.endsWith('.mp4');
+
   return (
     <>
-      <img
-        src={src}
-        alt={alt}
-        loading="lazy"
-        onError={() => setBroken(true)}
-        className="absolute inset-0 w-full h-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.04]"
-        style={{ filter: 'brightness(0.85) saturate(1.1)' }}
-      />
+      {isVideo ? (
+        <video
+          src={src}
+          autoPlay loop muted playsInline
+          onError={() => setBroken(true)}
+          className="absolute inset-0 w-full h-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.04]"
+          style={{ filter: 'brightness(0.85) saturate(1.1)' }}
+        />
+      ) : (
+        <img
+          src={src}
+          alt={title}
+          loading="lazy"
+          onError={() => setBroken(true)}
+          className="absolute inset-0 w-full h-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.04]"
+          style={{ filter: 'brightness(0.85) saturate(1.1)' }}
+        />
+      )}
       <div
         className="absolute inset-0 transition-opacity duration-500 group-hover:opacity-60"
         style={{ background: overlay, opacity: 0.8 }}
@@ -415,7 +429,13 @@ const Work = () => {
                   (e.currentTarget as HTMLElement).style.borderColor = 'rgba(255,255,255,0.06)';
                   (e.currentTarget as HTMLElement).style.boxShadow = 'none';
                 }}
-                onClick={() => navigate(getStudyPath(study.id))}
+                onClick={() => {
+                  if (study.externalLink) {
+                    window.open(study.externalLink, '_blank');
+                  } else {
+                    navigate(getStudyPath(study.id));
+                  }
+                }}
               >
                 {/* Inner layout */}
                 <div className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} lg:min-h-[420px]`}>
@@ -540,9 +560,16 @@ const Work = () => {
                           onMouseLeave={(e) => {
                             (e.currentTarget as HTMLElement).style.boxShadow = '0 0 0 0 hsl(45,100%,72%/0)';
                           }}
-                          onClick={(e) => { e.stopPropagation(); navigate(getStudyPath(study.id)); }}
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            if (study.externalLink) {
+                              window.open(study.externalLink, '_blank');
+                            } else {
+                              navigate(getStudyPath(study.id));
+                            }
+                          }}
                         >
-                          View Case Study
+                          {study.externalLink ? 'Visit Website' : 'View Case Study'}
                           <ArrowRight size={14} />
                         </button>
 

@@ -83,9 +83,9 @@ const StayCluelessCaseStudy = () => {
           <div className="relative group">
             <div className="absolute -inset-10 bg-orange-500/20 blur-[100px] opacity-30 group-hover:opacity-60 transition-opacity" />
             <div className="relative rounded-[40px] overflow-hidden border border-white/10 shadow-3xl bg-neutral-900 aspect-[4/5] lg:aspect-square">
-                <img 
-                  src="/stayclueless-mockup.png" 
-                  alt="Stay Clueless Interface"
+                <video 
+                  src="/mockup-clueless.mp4" 
+                  autoPlay loop muted playsInline
                   className="w-full h-full object-cover"
                 />
             </div>

@@ -84,9 +84,9 @@ const VelvetReelCaseStudy = () => {
           <div className="relative group">
             <div className="absolute -inset-10 bg-red-500/20 blur-[100px] opacity-30 group-hover:opacity-60 transition-opacity" />
             <div className="relative rounded-[40px] overflow-hidden border border-white/10 shadow-3xl bg-neutral-900 aspect-[4/5] lg:aspect-square">
-                <img 
-                  src="/velvetreel-mockup.png" 
-                  alt="Velvet Reel Interface"
+                <video 
+                  src="/velvetReel.mp4" 
+                  autoPlay loop muted playsInline
                   className="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-1000"
                 />
             </div>

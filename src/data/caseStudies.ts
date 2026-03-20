@@ -8,6 +8,7 @@ export type CaseStudy = {
   results: Record<string, string>;
   image: string;
   tags: string[];
+  externalLink?: string;
 };
 
 export const caseStudies: CaseStudy[] = [
@@ -28,7 +29,7 @@ export const caseStudies: CaseStudy[] = [
     },
     image:
       '/changecaptain-mockup.png', 
-    tags: ['FinTech', 'SaaS', 'Automation', 'Wordpress']
+    tags: ['FinTech', 'SaaS', 'Automation', 'WordPress']
   },
   {
     id: 'deerika-grocery',
@@ -61,7 +62,7 @@ export const caseStudies: CaseStudy[] = [
       talents: '5,000+',
       efficiency: '60%'
     },
-    image: '/velvetreel-mockup.png',
+    image: '/velvetReel.mp4',
     tags: ['Entertainment', 'Marketplace', 'Next.js']
   },
   {
@@ -76,7 +77,7 @@ export const caseStudies: CaseStudy[] = [
       community: '10k+',
       conversion: '+45%'
     },
-    image: '/stayclueless-mockup.png',
+    image: '/mockup-clueless.mp4',
     tags: ['Streetwear', 'E-commerce', 'Lifestyle']
   },
   {
@@ -130,7 +131,59 @@ export const caseStudies: CaseStudy[] = [
       'Collections': '6+ Designed',
       'Brand System': 'Complete'
     },
-    image: '',
+    image: '/exotic-mockup.png',
     tags: ['E-Commerce', 'Brand Identity', 'Fashion', 'UI/UX']
+  },
+  {
+    id: 'tpm',
+    title: 'TPM - WordPress Custom Theme',
+    client: 'tpm.in',
+    challenge:
+      'Modernizing the digital presence of a premier Indian trade remedies firm — transforming a text-heavy legal site into a professional, high-performance platform.',
+    process:
+      'Developed a WordPress custom theme from scratch to ensure peak performance, SEO optimization, and a seamless content management experience for complex practice areas.',
+    psychology:
+      'Establishing Authority & Professionalism — using minimalist design and a clear hierarchy to build trust with high-level corporate and legal clients.',
+    results: {
+      'Performance': '90+',
+      'Security': 'Hardened',
+      'UX': 'Optimized'
+    },
+    image: '/tpm-mockup.png',
+    tags: ['WordPress', 'Legal Tech', 'Custom Theme', 'Consulting']
+  },
+  {
+    id: 'career-talks',
+    title: 'Career Talks',
+    client: 'career-talks.in',
+    challenge:
+      'Connecting Indian students to world-class education in Germany by simplifying the complex process of university admissions, language courses, and visa applications.',
+    process:
+      'Developed a comprehensive educational consultancy platform featuring dedicated sections for varied programs such as Medical PG, Engineering, and German Language courses.',
+    psychology:
+      'Establishing trust and clarity; reducing anxiety associated with studying abroad through a straightforward, informative, and professional digital presence.',
+    results: {
+      'Inquiries': '+150%',
+      'Engagement': '+60%',
+      'Trust Base': 'High'
+    },
+    image: '/career-talks-mockup.png',
+    tags: ['Education', 'Consulting', 'UI/UX', 'Platform']
+  },
+  {
+    id: 'ies-gate-academy',
+    title: 'IES Gate Academy',
+    client: 'iesgateacademy.in',
+    challenge: 'Modernizing an established engineering coaching institute’s digital presence to offer online live classes, regular batches, and test series for ESE, GATE, and PSUs exams.',
+    process: 'Developed a comprehensive educational portal showcasing course details, batch timings, and student success stories with a strong focus on high-conversion landing pages.',
+    psychology: 'Building institutional authority through "Our Toppers" social proof and creating a sense of urgency for upcoming batches.',
+    results: {
+      'Reach': 'Pan-India',
+      'Test Series': '1000+',
+      'Platform': 'Live & VOD'
+    },
+    image: '/ies-gate-academy-mockup.png',
+    tags: ['EdTech', 'Coaching', 'Web Portal', 'Education'],
+    externalLink: 'https://iesgateacademy.in/'
   }
 ];

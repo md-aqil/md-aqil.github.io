@@ -14,6 +14,8 @@ import Work from "./pages/Work";
 import HoussyCaseStudy from "./pages/HoussyCaseStudy";
 import GoatXCaseStudy from "./pages/GoatXCaseStudy";
 import ExoticCaseStudy from "./pages/ExoticCaseStudy";
+import TPMCaseStudy from "./pages/TPMCaseStudy";
+import CareerTalksCaseStudy from "./pages/CareerTalksCaseStudy";
 import Resume from "./pages/Resume";
 import NotFound from "./pages/NotFound";
 
@@ -39,6 +41,8 @@ const App = () => (
             <Route path="/houssy-case-study" element={<HoussyCaseStudy />} />
             <Route path="/goatx-case-study" element={<GoatXCaseStudy />} />
             <Route path="/exotic-case-study" element={<ExoticCaseStudy />} />
+            <Route path="/tpm-case-study" element={<TPMCaseStudy />} />
+            <Route path="/career-talks-case-study" element={<CareerTalksCaseStudy />} />
             <Route path="/resume" element={<Resume />} />
             <Route path="/case-study/:slug" element={<CaseStudyDetail />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
