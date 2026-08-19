@@ -20,12 +20,12 @@ import {
 
 const Resume = () => {
   useEffect(() => {
-    document.title = 'Resume | Md Aqil - Senior UI/UX Designer & Developer';
+    document.title = 'Resume | Md Aqil - Senior Product Design Engineer';
   }, []);
 
   const handleDownload = () => {
     const doc = new jsPDF();
-    doc.text('Md Aqil - Senior UI/UX Designer & Developer', 10, 10);
+    doc.text('Md Aqil - Senior Product Design Engineer', 10, 10);
     doc.text('Experience:', 10, 20);
     doc.text('Company: DJT Corporation & Investments', 10, 30);
     doc.text('Role: Senior UI/UX Designer | Period: July 2021 - Dec 2025', 10, 40);
@@ -39,32 +39,35 @@ const Resume = () => {
   const experience = [
     {
       company: 'DJT Corporation & Investments',
-      role: 'Senior UI/UX Designer',
+      role: 'Senior Product Design Engineer',
       period: 'July 2021 — Dec 2025',
       location: 'Noida, India',
       points: [
-        'Implemented design system resulting in 20% conversion uplift.',
-        'Conducted UX audits identifying key pain points for major apps.',
-        'Designed mobile apps with 10k+ first-month downloads.',
-        'Secured ₹500,000+ funding via high-fidelity prototyping.'
+        'Owned design system end-to-end: Figma → React/TypeScript/Tailwind → Storybook (code-as-truth architecture).',
+        'Shipped 50+ production components with Radix UI, Framer Motion, design token theming — 40% faster feature delivery.',
+        'Daily AI-assisted workflow: Claude Code for component generation, token sync automation, PR reviews, design-to-code pipeline.',
+        'Designed AND built complex B2B SaaS interfaces: ROI calculators, data dashboards, automation workflows.',
+        'Global remote: 15+ countries served, async-first, cross-timezone collaboration (US/EU/Asia).'
       ]
     },
     {
       company: 'Bigly.io',
-      role: 'Lead UI/UX Designer & Developer',
+      role: 'Lead Product Design Engineer',
       period: 'Nov 2017 — Sept 2020',
       points: [
         'Increased user engagement by 30% through intuitive, psychology-led design.',
-        'Reduced user errors by 20% by incorporating meticulous user feedback loops.'
+        'Reduced user errors by 20% by incorporating meticulous user feedback loops.',
+        'Designed and built production React components, design systems, and frontend architecture.'
       ]
     },
     {
       company: 'Edunuts.com',
-      role: 'UI Developer',
+      role: 'Frontend Engineer (Design Systems)',
       period: 'Jan 2015 — Nov 2017',
       points: [
         'Focused on highly responsive, performance-optimized interfaces.',
-        'Reduced page load times by 30% through advanced frontend architecture.'
+        'Reduced page load times by 30% through advanced frontend architecture.',
+        'Built reusable component libraries and design token systems.'
       ]
     }
   ];
@@ -72,11 +75,12 @@ const Resume = () => {
   const contractualExperience = [
     {
       company: 'Change Captain',
-      role: 'Product Designer (Contract)',
+      role: 'Product Design Engineer (Contract)',
       period: '2023 — 2024',
       points: [
-        'Designed a code-as-truth automation platform eliminating manual R&D tax tagging.',
-        'Developed complex interactive ROI calculators for finance teams.'
+        'Designed and built a code-as-truth automation platform eliminating manual R&D tax tagging.',
+        'Developed complex interactive ROI calculators in React/TypeScript for finance teams.',
+        'Shipped production React components, design tokens, and automated workflows end-to-end.'
       ]
     },
     {
@@ -90,11 +94,12 @@ const Resume = () => {
     },
     {
       company: 'GoatX.io',
-      role: 'Web3 UI/UX Designer (Contract)',
+      role: 'Product Design Engineer (Contract)',
       period: '2023',
       points: [
-        'Designed full Web3 landing page and NFT tier architecture for DeFi farming.',
-        'Created live asset verification UI and interactive roadmap for blockchain trust.'
+        'Designed and built full Web3 landing page and NFT tier architecture for DeFi farming.',
+        'Created live asset verification UI and interactive roadmap in React/TypeScript.',
+        'Shipped production components with wallet integration and blockchain data visualization.'
       ]
     },
     {
@@ -500,9 +505,10 @@ const Resume = () => {
             <div>
               <h2 className="text-lg font-bold uppercase border-b border-gray-300 mb-2">Core Skills</h2>
               <div className="text-sm space-y-1">
-                <p><strong>Design:</strong> Figma, Adobe XD, Photoshop, Illustrator, Prototyping</p>
-                <p><strong>Development:</strong> React, Next.js, TypeScript, Tailwind CSS, GSAP</p>
-                <p><strong>AI:</strong> LLM Vibe Coding, AI Agent Research, GPT Automation</p>
+                <p><strong>Design:</strong> Figma, Adobe XD, Photoshop, Illustrator, Prototyping, Design Systems in Code</p>
+                <p><strong>Development:</strong> React, Next.js, TypeScript, Tailwind CSS, GSAP, Storybook, Framer Motion, Radix UI</p>
+                <p><strong>AI:</strong> LLM Vibe Coding, AI Agent Research, GPT Automation, Cursor, Claude Code</p>
+                <p><strong>Design Engineering:</strong> Component Architecture, Design Tokens, Design-System-as-Code, Figma→Code Workflow</p>
               </div>
             </div>
             <div>

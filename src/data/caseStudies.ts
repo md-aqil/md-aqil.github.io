@@ -19,9 +19,9 @@ export const caseStudies: CaseStudy[] = [
     challenge:
       'Finance teams lacked visibility into engineering ROI, while developers were burdened by manual R&D tax credit tagging and labor capitalization tracking.',
     process:
-      'Designed a code-as-truth automation platform that eliminates manual tagging. Developed a complex interactive ROI calculator and unified technical activity with GAAP/IFRS compliance.',
+      'Designed AND built a code-as-truth automation platform in React/TypeScript/Tailwind that eliminates manual tagging. Developed a complex interactive ROI calculator, unified technical activity with GAAP/IFRS compliance, and shipped production components end-to-end. Built design system tokens and component library as source of truth.',
     psychology:
-      'Leveraged the "Power of Objectivity" through automated data, reducing cognitive load for finance teams and friction for engineering teams.',
+      'Leveraged the "Power of Objectivity" through automated data, reducing cognitive load for finance teams and friction for engineering teams. Code-as-truth eliminates handoff ambiguity.',
     results: {
       savings: '+50%',
       visibility: '100%',
@@ -29,7 +29,7 @@ export const caseStudies: CaseStudy[] = [
     },
     image:
       '/changecaptain-mockup.png', 
-    tags: ['FinTech', 'SaaS', 'Automation', 'WordPress']
+    tags: ['FinTech', 'SaaS', 'Automation', 'React', 'TypeScript', 'Design Systems']
   },
   {
     id: 'deerika-grocery',

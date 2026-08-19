@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import { Brain, Eye, Target, Users, Lightbulb, TrendingUp } from 'lucide-react';
+import { Brain, Eye, Target, Users, Lightbulb, TrendingUp, Code, Palette, GitBranch } from 'lucide-react';
 import { Badge } from './ui/badge';
 import { gsap } from 'gsap';
 
@@ -8,6 +8,18 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 const psychologyPrinciples = [
+  {
+    icon: Code,
+    title: "Design Engineering",
+    description: "I close the gap between Figma and production. Components, tokens, motion, and accessibility — built in React/TypeScript/Tailwind, not handed off. Design systems live in code. Daily driver: Claude Code for component generation, token sync, PR reviews.",
+    color: "from-cyan-500 to-blue-600"
+  },
+  {
+    icon: Zap,
+    title: "AI-Native Workflows",
+    description: "Figma → Claude Code → Production. Daily use of Cursor, Claude Code, and MCP integrations for component scaffolding, design-to-code pipelines, and automated token synchronization. Ships faster, maintains quality.",
+    color: "from-purple-500 to-pink-600"
+  },
   {
     icon: Brain,
     title: "Fitts' Law",

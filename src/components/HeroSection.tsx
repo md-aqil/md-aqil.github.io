@@ -176,7 +176,7 @@ const HeroSection = () => {
           ref={subtitleRef}
           className="text-lg md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed font-medium"
         >
-          I'm <span className="text-foreground font-bold underline decoration-primary/50 decoration-4 underline-offset-4">Md Aqil</span> — a UX Designer crafting digital experiences backed by psychology. Every pixel serves a business purpose.
+          I'm <span className="text-foreground font-bold underline decoration-primary/50 decoration-4 underline-offset-4">Md Aqil</span> — a <strong>Senior Product Design Engineer</strong> who designs AND builds in React/TypeScript/Tailwind. Code-as-truth design systems. AI-native workflows (Claude Code daily). B2B SaaS & FinTech specialist. Global remote.
         </p>
 
 
