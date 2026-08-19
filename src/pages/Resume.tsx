@@ -24,14 +24,23 @@ const Resume = () => {
   }, []);
 
   const handleDownload = () => {
-    window.print();
+    const doc = new jsPDF();
+    doc.text('Md Aqil - Senior UI/UX Designer & Developer', 10, 10);
+    doc.text('Experience:', 10, 20);
+    doc.text('Company: DJT Corporation & Investments', 10, 30);
+    doc.text('Role: Senior UI/UX Designer | Period: July 2021 - Dec 2025', 10, 40);
+    doc.text('Achievements:', 10, 50);
+    doc.text(' - Implemented design system resulting in 20% conversion uplift.', 10, 60);
+    doc.text(' - Conducted UX audits identifying key pain points.', 10, 70);
+    doc.text(' - Designed mobile apps with 10k+ downloads.', 10, 80);
+    doc.save('Md_Aqil_Resume.pdf');
   };
 
   const experience = [
     {
       company: 'DJT Corporation & Investments',
       role: 'Senior UI/UX Designer',
-      period: 'July 2021 — Present',
+      period: 'July 2021 — Dec 2025',
       location: 'Noida, India',
       points: [
         'Implemented design system resulting in 20% conversion uplift.',
@@ -60,13 +69,147 @@ const Resume = () => {
     }
   ];
 
+  const contractualExperience = [
+    {
+      company: 'Change Captain',
+      role: 'Product Designer (Contract)',
+      period: '2023 — 2024',
+      points: [
+        'Designed a code-as-truth automation platform eliminating manual R&D tax tagging.',
+        'Developed complex interactive ROI calculators for finance teams.'
+      ]
+    },
+    {
+      company: 'Deerika Grocery',
+      role: 'UX Consultant (Contract)',
+      period: '2022 — 2023',
+      points: [
+        'Redesigned end-to-end user journey resulting in 284% order increase.',
+        'Implemented membership programs with instant cashback psychological triggers.'
+      ]
+    },
+    {
+      company: 'GoatX.io',
+      role: 'Web3 UI/UX Designer (Contract)',
+      period: '2023',
+      points: [
+        'Designed full Web3 landing page and NFT tier architecture for DeFi farming.',
+        'Created live asset verification UI and interactive roadmap for blockchain trust.'
+      ]
+    },
+    {
+      company: 'Houssy.in',
+      role: 'UX Designer (Freelance)',
+      period: '2023',
+      points: [
+        'Designed psychology-led property discovery platform with smart filters.',
+        'Increased lead inquiries by 320% through trust signaling and choice architecture.'
+      ]
+    },
+    {
+      company: 'IES Gate Academy',
+      role: 'Full Stack Designer (Contract)',
+      period: '2024',
+      points: [
+        'Modernized engineering coaching portal with live classes and test series.',
+        'Built high-conversion landing pages resulting in pan-India reach expansion.'
+      ]
+    },
+    {
+      company: 'The Velvet Reel',
+      role: 'UI/UX Designer (Contract)',
+      period: '2023',
+      points: [
+        'Created a premium marketplace for actors and models with automated verification.',
+        'Reduced talent onboarding friction by 60% through streamlined UX.'
+      ]
+    },
+    {
+      company: 'Stay Clueless',
+      role: 'E-commerce Designer (Contract)',
+      period: '2022',
+      points: [
+        'Transformed streetwear brand into a lifestyle movement with interactive collection reveals.',
+        'Achieved +45% conversion uplift through mobile-native shopping experience.'
+      ]
+    },
+    {
+      company: 'TPM Consulting',
+      role: 'WordPress Expert (Contract)',
+      period: '2022',
+      points: [
+        'Developed a high-performance custom WordPress theme for a premier trade remedies firm.',
+        'Optimized site architecture for SEO and complex legal content management.'
+      ]
+    },
+    {
+      company: 'Havenly',
+      role: 'UI/UX Designer (Contract)',
+      period: '2024',
+      points: [
+        'Designed a high-empathy mental health app with anonymous feeds and private journaling.',
+        'Implemented calming color psychology and emotional regulation UI patterns.'
+      ]
+    },
+    {
+      company: 'The Pot Dealer',
+      role: 'E-commerce Specialist (Contract)',
+      period: '2022',
+      points: [
+        'Built a premium plant e-commerce storefront focusing on biophilic design and lifestyle integration.',
+        'Optimized user flow for curated plant collections and corporate gifting modules.'
+      ]
+    },
+    {
+      company: 'Dizilight India',
+      role: 'UI/UX Consultant (Contract)',
+      period: 'Oct 2023 — March 2026',
+      points: [
+        'Lead designer for premium clients including Avika Creation (Fashion Boutique) and Magnificence Media (Full-service Marketing Agency).',
+        'Designed high-fidelity UI systems, advertising portfolios, and cinematic brand identities.'
+      ]
+    },
+    {
+      company: 'Pirafy',
+      role: 'Lead Product Designer (Contract)',
+      period: '2024',
+      points: [
+        'Designed an enterprise-grade cybersecurity dashboard for intellectual property protection.',
+        'Architected real-time monitoring interfaces and automated threat enforcement workflows.'
+      ]
+    },
+    {
+      company: 'SEO-Genie',
+      role: 'Product Designer (Contract)',
+      period: '2024',
+      points: [
+        'Designed an AI-powered SEO automation suite for enterprise marketing workflows.',
+        'Developed predictive SEO scoring dashboards and real-time content intelligence interfaces.'
+      ]
+    },
+    {
+      company: 'Wroffer',
+      role: 'UX Architect (Contract)',
+      period: '2024',
+      points: [
+        'Architected a low-code WhatsApp automation engine with drag-and-drop flow building capabilities.',
+        'Implemented defensive routing and interactive menu mapping for high-scale conversational commerce.'
+      ]
+    }
+  ];
+
   const projects = [
     { name: 'Deerika Grocery App', result: '+284% Orders' },
     { name: 'Change Captain', result: '+50% Savings' },
     { name: 'The Velvet Reel', result: '+142% Growth' },
     { name: 'GoatX.io', result: 'Web3 DeFi' },
     { name: 'Houssy.in', result: '+320% Inquiries' },
-    { name: 'Exotic Store', result: 'Brand Identity' }
+    { name: 'Havenly Wellness', result: 'Empathy UX' },
+    { name: 'The Pot Dealer', result: '+40% Sales' },
+    { name: 'Magnificence Media', result: 'Brand Identity' },
+    { name: 'Pirafy Security', result: 'Security UX' },
+    { name: 'SEO-Genie', result: 'AI SEO Automation' },
+    { name: 'Wroffer.io', result: 'WhatsApp Automation' }
   ];
 
   return (
@@ -78,11 +221,16 @@ const Resume = () => {
         <main className="max-w-6xl mx-auto pt-32 pb-20 px-6 lg:px-12">
           {/* Actions bar */}
           <div className="flex justify-between items-center mb-12 group">
-            <div className="flex items-center gap-3">
-              <div className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse" />
-              <span className="text-[10px] font-black uppercase tracking-[0.3em] text-amber-400">
-                Resume — 2026 Edition
-              </span>
+            <div className="flex items-center gap-6">
+              <div className="flex items-center gap-3">
+                <div className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse" />
+                <span className="text-[10px] font-black uppercase tracking-[0.3em] text-amber-400">
+                  Resume — 2026 Edition
+                </span>
+              </div>
+              <a href="/resume-enterprise" className="text-[10px] font-bold uppercase tracking-widest text-white/30 hover:text-amber-400 transition-colors border-l border-white/10 pl-6">
+                Switch to Enterprise CV
+              </a>
             </div>
             <Button 
               onClick={handleDownload}
@@ -151,7 +299,7 @@ const Resume = () => {
                   <div className="p-3 rounded-2xl bg-white/5 border border-white/10">
                     <Briefcase size={24} className="text-white/60" />
                   </div>
-                  <h2 className="text-3xl font-black italic tracking-tight uppercase">Selected Experience</h2>
+                  <h2 className="text-3xl font-black italic tracking-tight uppercase">Office Work</h2>
                 </div>
 
                 <div className="space-y-12 relative border-l border-white/5 pl-8 ml-6">
@@ -170,6 +318,39 @@ const Resume = () => {
                           {exp.points.map((p, j) => (
                             <li key={j} className="flex gap-3">
                               <span className="text-amber-400 font-bold">»</span>{p}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </section>
+
+              <section className="space-y-12">
+                <div className="flex items-center gap-4">
+                  <div className="p-3 rounded-2xl bg-white/5 border border-white/10">
+                    <Zap size={24} className="text-white/60" />
+                  </div>
+                  <h2 className="text-3xl font-black italic tracking-tight uppercase">Contractual Works</h2>
+                </div>
+
+                <div className="space-y-12 relative border-l border-white/5 pl-8 ml-6">
+                  {contractualExperience.map((exp, i) => (
+                    <div key={i} className="relative group">
+                      <div className="absolute -left-[45px] top-0 w-[26px] h-[26px] rounded-full bg-[#0A0C12] border-2 border-white/20 flex items-center justify-center group-hover:border-amber-400 transition-colors">
+                        <div className="w-2 h-2 rounded-full bg-white/20 group-hover:bg-amber-400 transition-colors" />
+                      </div>
+                      <div className="space-y-4">
+                        <div className="flex flex-col md:flex-row md:items-center justify-between gap-2">
+                          <h3 className="text-xl font-black tracking-tight group-hover:text-amber-400 transition-colors uppercase italic">{exp.company}</h3>
+                          <span className="text-[10px] font-black uppercase tracking-widest text-white/30">{exp.period}</span>
+                        </div>
+                        <p className="text-white/60 font-bold text-[10px] uppercase tracking-widest">{exp.role}</p>
+                        <ul className="space-y-2 text-white/40 text-[13px] leading-relaxed">
+                          {exp.points.map((p, j) => (
+                            <li key={j} className="flex gap-3">
+                              <span className="text-amber-400/50 font-bold">»</span>{p}
                             </li>
                           ))}
                         </ul>
@@ -278,16 +459,35 @@ const Resume = () => {
 
           {/* Experience */}
           <div className="mb-8">
-            <h2 className="text-lg font-bold uppercase border-b border-gray-300 mb-3">Work Experience</h2>
-            <div className="space-y-6">
+            <h2 className="text-lg font-bold uppercase border-b border-gray-300 mb-3">Professional Experience (Office)</h2>
+            <div className="space-y-4">
               {experience.map((exp, i) => (
                 <div key={i}>
-                  <div className="flex justify-between items-baseline mb-1">
-                    <h3 className="font-bold text-md">{exp.company}</h3>
-                    <span className="text-sm italic">{exp.period}</span>
+                  <div className="flex justify-between items-baseline mb-0.5">
+                    <h3 className="font-bold text-sm uppercase">{exp.company}</h3>
+                    <span className="text-[11px] italic">{exp.period}</span>
                   </div>
-                  <p className="font-bold text-sm text-gray-700 mb-2">{exp.role}</p>
-                  <ul className="list-disc ml-5 text-sm space-y-1">
+                  <p className="font-bold text-[11px] text-gray-700 mb-1">{exp.role}</p>
+                  <ul className="list-disc ml-5 text-[11px] space-y-0.5">
+                    {exp.points.map((p, j) => <li key={j}>{p}</li>)}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Contractual Work */}
+          <div className="mb-8">
+            <h2 className="text-lg font-bold uppercase border-b border-gray-300 mb-3">Selected Contractual Works</h2>
+            <div className="grid grid-cols-2 gap-x-8 gap-y-4">
+              {contractualExperience.map((exp, i) => (
+                <div key={i}>
+                  <div className="flex justify-between items-baseline mb-0.5">
+                    <h3 className="font-bold text-[11px] uppercase">{exp.company}</h3>
+                    <span className="text-[9px] italic">{exp.period}</span>
+                  </div>
+                  <p className="font-bold text-[9px] text-gray-600 mb-1">{exp.role}</p>
+                  <ul className="list-disc ml-4 text-[9px] space-y-0.5">
                     {exp.points.map((p, j) => <li key={j}>{p}</li>)}
                   </ul>
                 </div>

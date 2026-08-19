@@ -17,6 +17,7 @@ import ExoticCaseStudy from "./pages/ExoticCaseStudy";
 import TPMCaseStudy from "./pages/TPMCaseStudy";
 import CareerTalksCaseStudy from "./pages/CareerTalksCaseStudy";
 import Resume from "./pages/Resume";
+import SAPResume from "./pages/SAPResume";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -44,6 +45,7 @@ const App = () => (
             <Route path="/tpm-case-study" element={<TPMCaseStudy />} />
             <Route path="/career-talks-case-study" element={<CareerTalksCaseStudy />} />
             <Route path="/resume" element={<Resume />} />
+            <Route path="/resume-enterprise" element={<SAPResume />} />
             <Route path="/case-study/:slug" element={<CaseStudyDetail />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />

@@ -185,5 +185,117 @@ export const caseStudies: CaseStudy[] = [
     image: '/ies-gate-academy-mockup.png',
     tags: ['EdTech', 'Coaching', 'Web Portal', 'Education'],
     externalLink: 'https://iesgateacademy.in/'
+  },
+  {
+    id: 'havenly',
+    title: 'Havenly',
+    client: 'Havenly Wellness',
+    challenge: 'Creating a safe, anonymous digital environment for mental health support, journaling, and community expression without the stigma of traditional social media.',
+    process: 'Designed a high-empathy UI with calming aesthetics, anonymous feed architectures, and quick-access crisis resources.',
+    psychology: 'Self-Disclosure Theory & Color Psychology for emotional regulation.',
+    results: {
+      'Empathy UX': 'High',
+      'Safety': 'Verified',
+      'Support': 'Instant'
+    },
+    image: '/placeholder.svg',
+    tags: ['HealthTech', 'Wellness', 'Mobile App', 'UI/UX'],
+    externalLink: 'https://www.figma.com/design/4Uk6Yp24ATMo8HII07xZjh/Havenly?node-id=0-1&t=LnO8t4U3xZh3qScj-1'
+  },
+  {
+    id: 'the-pot-dealer',
+    title: 'The Pot Dealer',
+    client: 'The Pot Dealer',
+    challenge: 'Developing a premium e-commerce experience for urban gardening, focusing on plant care education and aesthetic lifestyle integration.',
+    process: 'Built a Shopify-driven storefront with curated collections, corporate gifting modules, and a "Plant Finder" UX to reduce gardener anxiety.',
+    psychology: 'Biophilic Design principles & The Scarcity Effect for rare plant drops.',
+    results: {
+      'Inventory': '500+ SKUs',
+      'UX Flow': 'Optimized',
+      'Conversion': '+40%'
+    },
+    image: '/placeholder.svg',
+    tags: ['E-commerce', 'Lifestyle', 'GreenTech', 'Shopify'],
+    externalLink: 'https://thepotdealer.in/'
+  },
+  {
+    id: 'avika-creation',
+    title: 'Avika Creation',
+    client: 'Avika Creation (via Dizilight)',
+    challenge: 'Designing a digital presence for a heritage boutique that balances traditional craftsmanship with a modern high-fashion e-commerce experience.',
+    process: 'Developed a visually rich brand system and UI for bespoke tailoring and ethnic collections, emphasizing "grace and culture" through editorial layouts.',
+    psychology: 'Scarcity & Authority through designer labels and limited-run "Atelier" collections.',
+    results: {
+      'Heritage': 'Since 2008',
+      'Services': 'Bespoke',
+      'UX': 'Premium'
+    },
+    image: '/placeholder.svg',
+    tags: ['Fashion', 'Lifestyle', 'E-commerce', 'UI/UX'],
+    externalLink: 'https://www.figma.com/design/ak56nRkVObVfQNiP1pZVtE/Avika-Creation?node-id=2-830&t=NlNXDvK0r39VW7Sy-1'
+  },
+  {
+    id: 'pirafy',
+    title: 'Pirafy',
+    client: 'Pirafy Security',
+    challenge: 'Designing a high-stakes digital security dashboard to protect elite intellectual property from piracy with 99.9% detection accuracy.',
+    process: 'Created an architectural-grade interface with real-time threat monitoring, automated enforcement workflows, and complex data visualization.',
+    psychology: 'Trust Architecture & The Vigilance Effect — using visual indicators of security and rapid-response UI patterns.',
+    results: {
+      'Detection': '99.9%',
+      'Assets': '50M+',
+      'Monitoring': '24/7'
+    },
+    image: '/placeholder.svg',
+    tags: ['Cybersecurity', 'SaaS', 'FinTech', 'UI/UX'],
+    externalLink: 'https://www.figma.com/proto/qFBW5WirmfXkPVjgLLK4CH/Pirafy?node-id=16-1060&viewport=-742%2C122%2C0.46&t=bH0mGJD4aOkStNzo-1&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=16%3A1060&page-id=14%3A352'
+  },
+  {
+    id: 'magnificence-media',
+    title: 'Magnificence Media',
+    client: 'Magnificence Media (via Dizilight)',
+    challenge: 'Redefining the digital ecosystem for a full-service marketing agency — creating a platform that showcases strategic branding, cinematic storytelling, and 360° media solutions.',
+    process: 'Designed a high-impact advertising portfolio with modular service blocks for OOH, Cinema Ads, and Digital Marketing. Focused on high-conversion visual storytelling.',
+    psychology: 'Anchoring Effect \u0026 Social Proof through case study magnification.',
+    results: {
+      'Reach': 'Global',
+      'Services': '360° Media',
+      'Impact': 'Premium'
+    },
+    image: '/placeholder.svg',
+    tags: ['Marketing', 'Advertising', 'Portfolio', 'UI/UX'],
+    externalLink: 'https://www.figma.com/design/M6Pf8XRkts5nUcGqVeONC1/Marketing?node-id=0-1&t=ZJMapK2EnghfF8NA-1'
+  },
+  {
+    id: 'seo-genie',
+    title: 'SEO-Genie',
+    client: 'SEO-Genie AI',
+    challenge: 'Automating complex SEO workflows for enterprise marketing teams — bridging the gap between keyword research, content generation, and technical SEO validation.',
+    process: 'Designed an AI-powered SEO suite with real-time content intelligence, automated metadata generation, and a predictive SEO score dashboard.',
+    psychology: 'Loss Aversion \u0026 The Goal Gradient Effect \u2014 using progress bars and score optimization to drive user action.',
+    results: {
+      'SEO Score': '100%',
+      'Automation': '70%',
+      'Efficiency': '+150%'
+    },
+    image: '/placeholder.svg',
+    tags: ['AI', 'SEO', 'Automation', 'SaaS', 'B2B'],
+    externalLink: 'http://187.127.154.55/'
+  },
+  {
+    id: 'wroffer-automation',
+    title: 'Wroffer Automation Studio',
+    client: 'Wroffer.io',
+    challenge: 'Designing a robust, low-code automation engine for WhatsApp marketing — allowing businesses to build complex conversational flows without writing code.',
+    process: 'Architected a drag-and-drop flow builder with defensive routing, interactive menu mapping, and real-time webhook synchronization.',
+    psychology: 'Fitts\'s Law \u0026 Cognitive Load Reduction \u2014 simplifying complex logic into visual, manageable nodes.',
+    results: {
+      'Flows Built': '500+',
+      'Sync Speed': '\u003C200ms',
+      'Stability': '99.9%'
+    },
+    image: '/placeholder.svg',
+    tags: ['SaaS', 'Automation', 'WhatsApp API', 'B2B'],
+    externalLink: 'https://lcsw.dpdns.org/login'
   }
 ];
